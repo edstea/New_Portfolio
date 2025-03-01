@@ -67,7 +67,7 @@
       <section id="contact" class="page light">
         <div class="content">
           <h2>Contact Me</h2>
-          <form id="contactForm">
+          <form id="contactForm" name="eddie-contact-form">
             <input type="text" name="name" placeholder="Your Name" required />
             <input
               type="email"
@@ -104,5 +104,26 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwL88XqfBR9JhVyegqnWCdFbbR4d1BjDqXVPy1-mqbnU10n6s08uMZbk5Cqrlr_IRBXHA/exec";
+      const form = document.forms["eddie-contact-form"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, {
+          method: "POST",
+          mode: "no-cors",
+          body: new FormData(form),
+        });
+
+        // Tampilkan pesan sukses tanpa menunggu respons
+        alert("Message sent successfully!");
+        form.reset(); // Reset formulir
+        // .then((response) => console.log("Success!", response))
+        // .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>

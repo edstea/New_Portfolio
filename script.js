@@ -111,25 +111,25 @@ window.addEventListener("scroll", () => {
 });
 
 // Google Sheets Integration
-const contactForm = document.getElementById("contactForm");
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+// const contactForm = document.getElementById("contactForm");
+// contactForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
 
-  const formData = new FormData(contactForm);
-  fetch("https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec", {
-    method: "POST",
-    body: formData,
-  })
-    .then((response) => {
-      if (response.ok) {
-        alert("Message sent successfully!");
-        contactForm.reset();
-      } else {
-        alert("Failed to send message.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again.");
-    });
-});
+//   const formData = new FormData(contactForm);
+//   fetch("https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec", {
+//     method: "POST",
+//     body: formData,
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         alert("Message sent successfully!");
+//         contactForm.reset();
+//       } else {
+//         alert("Failed to send message.");
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//       alert("An error occurred. Please try again.");
+//     });
+// });
