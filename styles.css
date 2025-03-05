@@ -13,7 +13,7 @@ body {
 
 /* Light Mode */
 body.light-mode .dark {
-  background-color: #f4f4f9; 
+  background-color: #f4f4f9;
   color: #333;
 }
 
@@ -136,6 +136,34 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.page h3 {
+  font-size: 2rem;
+  margin: 40px auto;
+  margin-bottom: 10px;
+}
+
+.certifications a {
+  text-decoration: none;
+  color: white;
+  /* border: 1px solid #007BFF; */
+}
+
+.certifications {
+  background: #007bff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  list-style: none;
+  /* align-items: center; */
+  margin: 0 auto;
+  width: 250px;
+  transition: transform 0.3s;
+  /* border: 1px solid red; */
+}
+
+.certifications:hover {
+  transform: scale(1.1);
+}
+
 .page p {
   font-size: 1.5rem;
 }
@@ -145,6 +173,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 .skills-list li {
