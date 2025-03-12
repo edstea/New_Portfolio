@@ -86,30 +86,6 @@ body.dark-mode .light {
   transform: scale(1.2);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #fff;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    align-items: center;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-}
-
 /* Full Page Layout */
 main {
   scroll-behavior: smooth;
@@ -128,6 +104,13 @@ main {
 .page .content {
   max-width: 800px;
   padding: 1rem;
+}
+.page .content.h2 {
+  margin-top: -50px;
+}
+
+.page h1 {
+  margin-top: 40px;
 }
 
 .page h1,
@@ -165,7 +148,7 @@ main {
 }
 
 .page p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .skills-list {
@@ -217,12 +200,22 @@ main {
   transform: scale(1.1);
 }
 
+input::placeholder,
+textarea::placeholder {
+  font-size: 15px;
+  font-family: "Courier New", monospace;
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #333;
   color: white;
+}
+
+span {
+  color: red;
 }
 
 /* Floating Buttons */
@@ -272,4 +265,28 @@ footer {
   border-radius: 5px;
   font-size: 0.8rem;
   white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: block;
+  }
 }
